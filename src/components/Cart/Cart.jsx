@@ -1,25 +1,22 @@
 import { Button } from "flowbite-react"
 import React from 'react'
 import { useState } from "react"
-import {FiShoppingBag} from "react-icons/fi"
+import {MdOutlineShoppingCart} from "react-icons/md"
+import { useSelector } from "react-redux"
+import CartItem from "./CartItem"
 
-
-
-import { useSelector,useDispatch } from "react-redux"
-import { incrementQuantity,decrementQuantity,removeFromCart } from "../../../redux/cart.slice"
 
 const Cart = () => {
 
-
+///redux
    const cart = useSelector((state) => state.cart);
-   const dispatch = useDispatch();
-
   const getTotalPrice = () => {
     return cart.reduce(
       (accumulator, item) => accumulator + item.quantity * item.price,
       0
     );
   };
+  //redux end
 
 
  const [CartOpen, setCartOpen] = useState(false);
@@ -31,49 +28,39 @@ const Cart = () => {
   return (
     
      <>
-     <Button onClick={() => handleCart()}>
-      <FiShoppingBag size={25}/>
-     </Button>
+     {!CartOpen ?
+     <button className="" 
+     onClick={() => handleCart()}>
+      <MdOutlineShoppingCart size={22}/>
+     </button> : <Button onClick={() => handleCart()}>X</Button>}
   
 
-    <div >
+     <div className={`-top-1 z-50 right-0 flex flex-col rounded-b-lg border-b border-black bg-white fixed bg-secondary w-full h-[70vh] py-5
+       ${CartOpen ? '-translate-y':'-translate-y-full'}
+       ease-in-out duration-300
+       }`}>
+    <div>
+
+
+      <button onClick={() => handleCart()}>X</button>
       {cart.length === 0 ? (
         <h1>Your Cart is Empty!</h1>
       ) : (
         <>
-          <div className="flex justify-evenly">
-            <div>Image</div>
-            <div>Product</div>
-            <div>Price</div>
-            <div>Quantity</div>
-            <div>Actions</div>
-            <div>Total Price</div>
-          </div>
+        <h2 className="text-lg font-semibold">Total: Rs {getTotalPrice()}</h2>
+        <div className="flex flex-col items-center lg:justify-center lg:flex-row lg:flex-wrap gap-2 max-h-[55vh] overflow-scroll">
+
           {cart.map((item) => (
-            <div className="flex justify-evenly">
-              <div >
-                <img src={item.image[0].url} height="90" width="65" />
-              </div>
-              <p>{item.title}</p>
-              <p>Rs {item.price}</p>
-              <p>{item.quantity}</p>
-              <div>
-                <button onClick={() => dispatch(incrementQuantity(item.id))}>
-                  +
-                </button>
-                <button onClick={() => dispatch(decrementQuantity(item.id))}>
-                  -
-                </button>
-                <button onClick={() => dispatch(removeFromCart(item.id))}>
-                  x
-                </button>
-              </div>
-              <p>$ {item.quantity * item.price}</p>
-            </div>
+            
+           <CartItem item={item}/>
           ))}
-          <h2>Grand Total: Rs {getTotalPrice()} VAT included</h2>
+        </div>
+
         </>
       )}
+    </div>
+
+
     </div>
    
 

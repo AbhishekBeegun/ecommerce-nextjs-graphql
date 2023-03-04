@@ -6,15 +6,14 @@ import Link from "next/link";
 import CimFinance from "../Calculation/CimFinance";
 import SaveSale from "../Calculation/SaveSale";
 import {IoMdGitCompare} from "react-icons/io"
+import AddtoCartBtn from "../Cart/AddtoCartBtn";
 
 
-import { useDispatch } from "react-redux";
-import { addToCart } from "../../../redux/cart.slice";
 
 const SingleProduct = ({products}) => {
 
 
-  const dispatch = useDispatch();
+  
 
 
   const [compare, setcompare] = useState([]);
@@ -69,6 +68,11 @@ const SingleProduct = ({products}) => {
                 <CimFinance price={product.price}/>
 
                 </div>
+ 
+                <>
+                  {/* <AddtoCartBtn product={product}/> bttn not activate */}
+                </>
+
                 <div title="Compare" 
                 className="absolute top-5 left-2">
                   <div className="bg-white p-1 rounded-lg flex items-center justify-center">
@@ -79,11 +83,6 @@ const SingleProduct = ({products}) => {
                   </div>
                 </div>
 
-                <button 
-                 onClick={() => dispatch(addToCart(product))}
-                 className="border rounded-lg border-primary w-28 h-10 text-xs bg-primary text-secondary">
-                 ADD TO CART
-                 </button>
 
 
                 <div>

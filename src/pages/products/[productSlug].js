@@ -9,6 +9,7 @@ import {BsArrowUpShort} from "react-icons/bs"
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../../redux/cart.slice";
+import AddtoCartBtn from "@/components/Cart/AddtoCartBtn";
 
 // export const CartContext = createContext();
 
@@ -122,11 +123,7 @@ const handlewish =() =>{
             </div>
           </div>
 
-          {/* <button 
-          onClick={() => dispatch(addToCart(product))}
-          className="border rounded-lg border-primary w-28 h-10 text-xs bg-primary text-secondary">
-            ADD TO CART
-          </button> */}
+           <AddtoCartBtn product={product}/>
           </div>
         </div>
         </div>

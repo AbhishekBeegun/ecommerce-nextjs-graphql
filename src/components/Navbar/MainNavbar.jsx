@@ -19,13 +19,10 @@ const MainNavbar = () => {
       alt="Store Logo"
     />
   </Navbar.Brand>
-  <div className="flex items-center gap-2 md:order-2">
-   
-   <Cart/>
-   
+  <div className="flex items-center gap-2 md:order-3">
    <User/>
-    
-    <Navbar.Toggle />
+   <Cart/>    
+  <Navbar.Toggle />
   </div>
   <Navbar.Collapse>
     <Navbar.Link

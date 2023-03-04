@@ -3,11 +3,11 @@ import { Dropdown } from "flowbite-react"
 import { Avatar } from "flowbite-react"
 const User = () => {
   return (
-    <div>
-        <Dropdown 
+    <>
+      <Dropdown 
       arrowIcon={false}
       inline={true}
-      label={<Avatar size="xs"/>}
+      label={<Avatar rounded={true} size="xs"/>}
     >
       <Dropdown.Header>
         <span className="block text-sm">
@@ -31,7 +31,7 @@ const User = () => {
         Sign out
       </Dropdown.Item>
   </Dropdown>
-    </div>
+    </>
   )
 }
 
