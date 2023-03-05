@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { gql } from "@apollo/client";
 import { getApolloClient } from "@/lib/apollo-client";
 import SingleProduct from "@/components/ProductLayout/SingleProduct";
+import PageInfo from "@/components/BasicLayout/PageInfo";
 
 
 const Shop = ({products}) => {
@@ -16,7 +17,8 @@ const Shop = ({products}) => {
   }, [])
   
   return (
-    <div>Display all products available here
+    <div>
+    <PageInfo Info={"all products"}/>
     <SingleProduct products={Products}/>
     </div>
   )

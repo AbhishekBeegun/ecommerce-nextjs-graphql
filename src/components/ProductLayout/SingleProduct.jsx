@@ -1,4 +1,5 @@
 import React from 'react'
+import { Spinner } from "flowbite-react";
 import { useEffect } from 'react'
 import { useState } from "react";
 import Image from "next/image";
@@ -6,7 +7,7 @@ import Link from "next/link";
 import CimFinance from "../Calculation/CimFinance";
 import SaveSale from "../Calculation/SaveSale";
 import {IoMdGitCompare} from "react-icons/io"
-import AddtoCartBtn from "../Cart/AddtoCartBtn";
+// import AddtoCartBtn from "../Cart/AddtoCartBtn";
 
 
 
@@ -37,7 +38,7 @@ const SingleProduct = ({products}) => {
     //     }
 
   return (
-    <div className="">
+    <div className="py-4">
         <main className="">
         <ul className="flex flex-wrap justify-center items-center gap-5">
           {products && products.length > 0 && products.map(product => {
@@ -109,10 +110,9 @@ const SingleProduct = ({products}) => {
           })}
 
           {!products || products.length === 0 && (
-            <div>
-              <p>
-                Oops, no Product found!
-              </p>
+            <div className="text-center">
+              {/* need to find a way to change color in flowbite */}
+             <Spinner aria-label="Lording" color="failure" size="xl"/>
             </div>
           )}
         </ul> 

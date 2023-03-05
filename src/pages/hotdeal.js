@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { gql } from "@apollo/client";
 import { getApolloClient } from "@/lib/apollo-client";
 import SingleProduct from "@/components/ProductLayout/SingleProduct";
+import PageInfo from "@/components/BasicLayout/PageInfo";
 
 
 const hotdeal = ({products}) => {
@@ -17,7 +18,8 @@ const hotdeal = ({products}) => {
 
 
   return (
-    <div>Product currently on sale
+    <div>
+      <PageInfo Info={"hot deals"} />
       <SingleProduct products={Products}/>
     </div>
   )

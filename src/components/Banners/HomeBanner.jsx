@@ -10,11 +10,11 @@ const HomeBanner = () => {
       src="https://media.graphassets.com/output=format:jpg/resize=height:800,fit:max/rXB6lmnLTXyPUHwkyUV9"
       alt="..."
     />
-    {/* <img
-      src="https://flowbite.com/docs/images/carousel/carousel-2.svg"
+    <img
+      src="https://media.graphassets.com/output=format:jpg/resize=height:800,fit:max/lflQuitSySQZTapiUEUu"
       alt="..."
     />
-    <img
+    {/* <img
       src="https://flowbite.com/docs/images/carousel/carousel-3.svg"
       alt="..."
     /> */}

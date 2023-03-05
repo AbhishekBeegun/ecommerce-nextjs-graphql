@@ -10,6 +10,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../../redux/cart.slice";
 import AddtoCartBtn from "@/components/Cart/AddtoCartBtn";
+import DescriptionTab from "@/components/ProductLayout/DescriptionTab";
 
 // export const CartContext = createContext();
 
@@ -67,7 +68,7 @@ const handlewish =() =>{
         </div>
 
         <div>
-          RELATED PRODUCTS OR IMAGES
+          <DescriptionTab/>
         </div>
 
          {/* fixed bottom  */}
@@ -96,7 +97,7 @@ const handlewish =() =>{
           {/* <p className="text-primary text-xs text-center">{product.sku}</p> */}
           </div>
 
-           {/* product description  */}
+           {/* product description // replace with logo   */}
           <div className="flex justify-center text-primary">
           <h3 dangerouslySetInnerHTML={{__html: product.content}} className="text-xs text-center py-4 h-[10vh] overflow-scroll" />            
           </div>
