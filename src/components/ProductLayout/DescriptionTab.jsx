@@ -10,7 +10,7 @@ const DescriptionTab = ({content}) => {
   return (
     <div>
       <PageInfo Info={"description"}/>
-    <h3 dangerouslySetInnerHTML={{__html: content.html}} className="text-base text-red-600 font-semibold text-center py-4 h-[15vh] overflow-scroll" />            
+    <h3 dangerouslySetInnerHTML={{__html: content.html}} className="text-base text-primary font-semibold text-center py-4 h-[15vh] overflow-scroll" />            
     </div>
   )
 }

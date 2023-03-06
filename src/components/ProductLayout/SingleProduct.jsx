@@ -76,7 +76,7 @@ const SingleProduct = ({products}) => {
 
                 <div title="Compare" 
                 className="absolute top-5 left-2">
-                  <div className="bg-white p-1 rounded-lg flex items-center justify-center">
+                  <div className="bg-secondary p-1 rounded-lg flex items-center justify-center">
                    <button onClick={() => handleClick(product)}
                     className="text-primary">
                     <IoMdGitCompare size={25}/>

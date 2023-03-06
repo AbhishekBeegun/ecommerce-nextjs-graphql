@@ -73,13 +73,13 @@ const LayoutFooter = () => {
         </Footer.LinkGroup>
       </div>
     </div>
-    <div className="w-full bg-red-600 py-6 px-4 sm:flex sm:items-center sm:justify-between">
+    <div className="w-full bg-primary py-6 px-4 sm:flex sm:items-center sm:justify-between">
       <Footer.Copyright
         href="#"
         by="Abhishek Beegun™"
         year={new Date().getFullYear()}
       />
-      <div className="mt-4 text-white flex space-x-6 sm:mt-0 sm:justify-center">
+      <div className="mt-4 text-secondary flex space-x-6 sm:mt-0 sm:justify-center">
         
        <BsFacebook/>
   

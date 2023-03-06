@@ -65,23 +65,23 @@ const handlewish =() =>{
         {/* description */}
         <div>
          <PageInfo Info={"description"}/>
-         <h3 dangerouslySetInnerHTML={{__html: product.content.html}} className="text-base text-red-600 font-semibold text-center py-4 h-[15vh] overflow-scroll" />            
+         <h3 dangerouslySetInnerHTML={{__html: product.content.html}} className="text-base text-primary font-semibold text-center py-4 h-[15vh] overflow-scroll" />            
         </div>        
     
 
          {/* fixed bottom  */}
 
-        <div className={`fixed z-10 bottom-0 left-0 w-full h-[50vh] border-t border-gray-400 rounded-t-2xl bg-white flex flex-col justify-evenly
+        <div className={`fixed z-10 bottom-0 left-0 w-full h-[50vh] border-t border-gray-400 rounded-t-2xl bg-secondary flex flex-col justify-evenly
            ${Isopen ? 'translate-y-0':'translate-y-[40vh]'} ease-in-out duration-300`}>
            {/* scroll to hide  */}
           <div className="flex justify-center">
-          <button className="p-2 rounded-lg text-red-600" 
+          <button className="p-2 rounded-lg text-primary" 
           onClick={() => setIsopen(!Isopen)}>  
           {Isopen ? <BiHide size={25}/> : <BsArrowUpShort size={25} className="animate-bounce"/>}         
           </button>
           </div>
            {/* title and wishlist  */}
-          <div className="flex justify-evenly items-center px-2 text-red-600">
+          <div className="flex justify-evenly items-center px-2 text-primary">
            <h1 className="font-semibold text-xl shrink">{product.title}</h1>
            <button onClick={() => handlewish()}
            className="">

@@ -17,7 +17,7 @@ const AddtoCartBtn = ({product}) => {
       <Toaster/>
     <button 
      onClick={() => {dispatch(addToCart(product)) ; click()}}
-     className="border bg-red-600 text-white rounded-lg w-28 h-10 text-xs font-semibold">
+     className="border bg-primary text-secondary rounded-lg w-28 h-10 text-xs font-semibold">
      ADD TO CART
      </button>
     </div>

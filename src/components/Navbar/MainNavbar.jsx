@@ -37,25 +37,25 @@ const MainNavbar = () => {
   {/* ///categories */}
   <Navbar.Collapse>
    {/* smartphones */}
-   <div className="flex flex-col items-center md:flex-row gap-2 text-red-600 font-semibold text-base">
+   <div className="flex flex-col items-center md:flex-row gap-2 text-primary font-semibold text-base">
   <Dropdown
   label="Phones & Accessories"
   inline={true}
   placement="bottom"
 >
-  <Dropdown.Item className="text-red-600">
+  <Dropdown.Item className="text-primary">
     <Link href={`/categories/${"smartphone"}`}>
       Smartphones
     </Link>
   </Dropdown.Item>
   <Dropdown.Divider />
-  <Dropdown.Item className="text-red-600">
+  <Dropdown.Item className="text-primary">
   <Link href={`/categories/${"tablet"}`}>
      Tablets
     </Link>
   </Dropdown.Item>
   <Dropdown.Divider />
-  <Dropdown.Item className="text-red-600">
+  <Dropdown.Item className="text-primary">
   <Link href={`/categories/${"smartwatch"}`}>
       Smartwatch
     </Link>
@@ -70,13 +70,13 @@ const MainNavbar = () => {
   inline={true}
   placement="bottom"
 >
-  <Dropdown.Item className="text-red-600">
+  <Dropdown.Item className="text-primary">
   <Link href={`/categories/${"television"}`}>
       Televisions
     </Link>
   </Dropdown.Item>
   <Dropdown.Divider />
-  <Dropdown.Item className="text-red-600">
+  <Dropdown.Item className="text-primary">
   <Link href={`/categories/${"soundbar"}`}>
       Soundbar
     </Link>
@@ -92,7 +92,7 @@ const MainNavbar = () => {
   inline={true}
   placement="bottom"
 >
-  <Dropdown.Item className="text-red-600">
+  <Dropdown.Item className="text-primary">
   <Link href={`/categories/${"laptop"}`}>
       Laptops
     </Link>
@@ -107,13 +107,13 @@ const MainNavbar = () => {
   inline={true}
   placement="bottom"
 >
-  <Dropdown.Item className="text-red-600">
+  <Dropdown.Item className="text-primary">
   <Link href={`/categories/${"washer"}`}>
       Washer
     </Link>
   </Dropdown.Item>
   <Dropdown.Divider />
-  <Dropdown.Item className="text-red-600">
+  <Dropdown.Item className="text-primary">
   <Link href={`/categories/${"dryer"}`}>
       Dryer
     </Link>

@@ -7,6 +7,23 @@
     display: none;
 }
 
+
+.theme-galaxy {
+    --color-primary: #D82530;
+    --color-secondary : white;
+  }
+  
+  .theme-361 {
+    --color-primary: #FF5E00;
+    --color-secondary : white;
+  }
+  
+  .theme-courts {
+    --color-primary: #0066CC;
+    --color-secondary : white;
+  }
+  
+
 .brandimg {
     @apply border rounded-lg hover:scale-110 transition-all ease-in-out w-[150px] h-[150px]
 }

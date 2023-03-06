@@ -3,7 +3,7 @@ import React from 'react'
 
 const NavbarFix = () => {
   return (
-    <nav className="bg-red-600 text-white text-sm font-semibold uppercase px-4 h-[30px] flex items-center justify-evenly">
+    <nav className="bg-primary text-secondary text-sm font-semibold uppercase px-4 h-[30px] flex items-center justify-evenly">
     <Link href="/hotdeal">
         Hot deals
     </Link>
