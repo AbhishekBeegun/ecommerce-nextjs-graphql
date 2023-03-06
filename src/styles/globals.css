@@ -6,3 +6,7 @@
 * ::-webkit-scrollbar{
     display: none;
 }
+
+.brandimg {
+    @apply border rounded-lg hover:scale-110 transition-all ease-in-out w-[150px] h-[150px]
+}

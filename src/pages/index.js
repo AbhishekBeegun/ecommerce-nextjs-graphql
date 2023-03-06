@@ -7,6 +7,7 @@ import { gql } from "@apollo/client";
 import { getApolloClient } from "@/lib/apollo-client";
 import PageInfo from "@/components/BasicLayout/PageInfo";
 import SingleProduct from "@/components/ProductLayout/SingleProduct";
+import Searchbar from "@/components/Search/Searchbar";
 
 
         //  {DOTW.map(item => {   how to map through an arry
@@ -49,8 +50,8 @@ export default function Home({MainPageproducts}) {
 
    
       <main>
-        <PageInfo Info={"home"}/>
         <HomeBanner/>
+        <Searchbar/>
         <div className="py-2">
         <PageInfo Info={"Deal of the week"}/>
         <SingleProduct products={DOTW} />

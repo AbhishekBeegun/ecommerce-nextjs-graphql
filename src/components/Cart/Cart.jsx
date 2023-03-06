@@ -29,10 +29,14 @@ const Cart = () => {
     
      <>
      {!CartOpen ?
-     <button className="" 
-     onClick={() => handleCart()}>
+     <>  
+      <button className="relative" 
+      onClick={() => handleCart()}>
+      <p className="absolute -top-3 -right-4 text-xs font-semibold bg-red-600 px-2 py-1 rounded-full text-white">{cart.length}</p>
       <MdOutlineShoppingCart size={22}/>
-     </button> : <Button onClick={() => handleCart()}>X</Button>}
+     </button>
+     </>
+ : <Button onClick={() => handleCart()}>X</Button>}
   
 
      <div className={`-top-1 z-50 right-0 flex flex-col rounded-b-lg border-b border-black bg-white fixed bg-secondary w-full h-[70vh] py-5

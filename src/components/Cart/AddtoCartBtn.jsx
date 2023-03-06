@@ -1,19 +1,22 @@
 import React from 'react'
-import { Button } from "flowbite-react";
+import { Toaster,toast } from "react-hot-toast";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../../redux/cart.slice";
 
 
 const AddtoCartBtn = ({product}) => {
   const dispatch = useDispatch();
-
+  
   function click(){
-    console.log(product)
+    toast.success("Added to cart")
+   
   }
+
   return (
     <div>
+      <Toaster/>
     <button 
-     onClick={() => dispatch(addToCart(product))}
+     onClick={() => {dispatch(addToCart(product)) ; click()}}
      className="border bg-red-600 text-white rounded-lg w-28 h-10 text-xs font-semibold">
      ADD TO CART
      </button>

@@ -8,21 +8,15 @@ import {BiHide}from "react-icons/bi"
 import {BsArrowUpShort} from "react-icons/bs"
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addToCart } from "../../../redux/cart.slice";
 import AddtoCartBtn from "@/components/Cart/AddtoCartBtn";
-import DescriptionTab from "@/components/ProductLayout/DescriptionTab";
-
+import PageInfo from "@/components/BasicLayout/PageInfo";
 // export const CartContext = createContext();
 
 export default function Products({ products }) {
   
-
   ///redux part
 
   const dispatch = useDispatch();
-
-
-
 
 
   const [Isopen, setIsopen] = useState(true);
@@ -57,6 +51,7 @@ const handlewish =() =>{
   setAddtowishlist(!Addtowishlist)
 }
 
+
   return (
     <>
       <main>    
@@ -64,12 +59,15 @@ const handlewish =() =>{
         <div key={product.slug} className="flex flex-col lg:flex-row justify-center lg:gap-10">
         {/* image */}
         <div className="flex items-center justify-center">
-        <img className="h-[40vh] w-fit border" src={product.image[0].url} alt="ProductImage" />
+        <img className="h-[30vh] w-fit border" src={product.image[0].url} alt="ProductImage" />
         </div>
 
+        {/* description */}
         <div>
-          <DescriptionTab/>
-        </div>
+         <PageInfo Info={"description"}/>
+         <h3 dangerouslySetInnerHTML={{__html: product.content.html}} className="text-base text-red-600 font-semibold text-center py-4 h-[15vh] overflow-scroll" />            
+        </div>        
+    
 
          {/* fixed bottom  */}
 
@@ -77,13 +75,13 @@ const handlewish =() =>{
            ${Isopen ? 'translate-y-0':'translate-y-[40vh]'} ease-in-out duration-300`}>
            {/* scroll to hide  */}
           <div className="flex justify-center">
-          <button className="p-2 rounded-lg " 
+          <button className="p-2 rounded-lg text-red-600" 
           onClick={() => setIsopen(!Isopen)}>  
           {Isopen ? <BiHide size={25}/> : <BsArrowUpShort size={25} className="animate-bounce"/>}         
           </button>
           </div>
            {/* title and wishlist  */}
-          <div className="flex justify-evenly items-center px-2">
+          <div className="flex justify-evenly items-center px-2 text-red-600">
            <h1 className="font-semibold text-xl shrink">{product.title}</h1>
            <button onClick={() => handlewish()}
            className="">
@@ -91,20 +89,15 @@ const handlewish =() =>{
              
           </button>
           </div>
-          
-           {/* brand logo xs  sku */}
-          <div>
-          {/* <p className="text-primary text-xs text-center">{product.sku}</p> */}
-          </div>
 
            {/* product description // replace with logo   */}
           <div className="flex justify-center text-primary">
-          <h3 dangerouslySetInnerHTML={{__html: product.content}} className="text-xs text-center py-4 h-[10vh] overflow-scroll" />            
+          <img src={product.categories[0].image.url} alt="logo" width="100px" />
           </div>
 
           {/* Cimfinace */}
           <div className="flex justify-center items-center gap-10">
-          <img src="https://cimfinance.mu/images/homepage/homepage_logo.png" className="w-[60px] lg:w-[120px] h-[20px] lg:h-auto" />
+          <img src="https://cimfinance.mu/images/homepage/homepage_logo.png" alt="cim" className="w-[60px] lg:w-[120px] h-[20px] lg:h-auto" />
           <CimFinance price={product.price}/>
           </div>
 
@@ -123,8 +116,9 @@ const handlewish =() =>{
                 </>}
             </div>
           </div>
-
+      
            <AddtoCartBtn product={product}/>
+  
           </div>
         </div>
         </div>
@@ -154,7 +148,12 @@ export async function getStaticProps({ params = {} } = {}) {
                 url
               }
               content{
-                text
+                html
+              }
+              categories {
+                image {
+                  url
+                }
               }
             }
          }
