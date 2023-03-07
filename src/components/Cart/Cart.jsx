@@ -32,7 +32,7 @@ const Cart = () => {
      <>  
       <button className="relative" 
       onClick={() => handleCart()}>
-      <p className="absolute -top-3 -right-4 text-xs font-semibold bg-primary px-2 py-1 rounded-full text-secondary">{cart.length}</p>
+      {cart.length === 0 ? <></>:<p className="absolute -top-3 -right-4 text-xs font-semibold bg-primary px-2 py-1 rounded-full text-secondary">{cart.length}</p>}
       <MdOutlineShoppingCart size={22}/>
      </button>
      </>
