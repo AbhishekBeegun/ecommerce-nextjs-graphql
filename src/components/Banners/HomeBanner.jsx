@@ -14,10 +14,10 @@ const HomeBanner = () => {
       src="https://media.graphassets.com/output=format:jpg/resize=height:800,fit:max/lflQuitSySQZTapiUEUu"
       alt="..."
     />
-    {/* <img
-      src="https://flowbite.com/docs/images/carousel/carousel-3.svg"
+    <img
+      src="https://images.samsung.com/is/image/samsung/assets/us/home/02132023/HOME_DM3_KV_Main-KV_1440x640_pc.jpg?imwidth=1366"
       alt="..."
-    /> */}
+    />
   </Carousel>
 </div>
     </>

@@ -1,12 +1,11 @@
 import React from 'react'
 import { Spinner } from "flowbite-react";
-import { useEffect } from 'react'
 import { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import CimFinance from "../Calculation/CimFinance";
 import SaveSale from "../Calculation/SaveSale";
 import {IoMdGitCompare} from "react-icons/io"
+import CompareBtn from "../Compare/CompareBtn";
 // import AddtoCartBtn from "../Cart/AddtoCartBtn";
 
 
@@ -17,7 +16,6 @@ const SingleProduct = ({products}) => {
   
 
 
-  const [compare, setcompare] = useState([]);
       ///cart local storage
       // useEffect(() => {
       //   const newCartData = JSON.parse(localStorage.getItem("compare-data"))
@@ -76,12 +74,7 @@ const SingleProduct = ({products}) => {
 
                 <div title="Compare" 
                 className="absolute top-5 left-2">
-                  <div className="bg-secondary p-1 rounded-lg flex items-center justify-center">
-                   <button onClick={() => handleClick(product)}
-                    className="text-primary">
-                    <IoMdGitCompare size={25}/>
-                   </button>
-                  </div>
+                  <CompareBtn product={product}/>
                 </div>
 
 

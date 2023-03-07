@@ -7,17 +7,13 @@ import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import {BiHide}from "react-icons/bi"
 import {BsArrowUpShort} from "react-icons/bs"
 import { useState } from "react";
-import { useDispatch } from "react-redux";
 import AddtoCartBtn from "@/components/Cart/AddtoCartBtn";
 import PageInfo from "@/components/BasicLayout/PageInfo";
+import { toast } from "react-hot-toast";
 // export const CartContext = createContext();
 
 export default function Products({ products }) {
   
-  ///redux part
-
-  const dispatch = useDispatch();
-
 
   const [Isopen, setIsopen] = useState(true);
   const [Addtowishlist, setAddtowishlist] = useState(false);
@@ -49,6 +45,7 @@ export default function Products({ products }) {
 
 const handlewish =() =>{ 
   setAddtowishlist(!Addtowishlist)
+  toast.error("Wishlist not impremented")
 }
 
 
@@ -65,7 +62,7 @@ const handlewish =() =>{
         {/* description */}
         <div>
          <PageInfo Info={"description"}/>
-         <h3 dangerouslySetInnerHTML={{__html: product.content.html}} className="text-base text-primary font-semibold text-center py-4 h-[15vh] overflow-scroll" />            
+         <h3 dangerouslySetInnerHTML={{__html: product.content.html}} className="text-base text-primary font-semibold text-center py-4" />            
         </div>        
     
 
