@@ -1,6 +1,4 @@
 import React from 'react'
-import { useState } from "react";
-import { useEffect } from "react";
 import { gql } from "@apollo/client";
 import { getApolloClient } from "@/lib/apollo-client";
 import SingleProduct from "@/components/ProductLayout/SingleProduct";
@@ -9,18 +7,11 @@ import HeadC from "@/components/BasicLayout/Head";
 
 const Shop = ({products}) => {
 
-  const [Products, setProducts] = useState([])
-
-  useEffect(() => {
-    setProducts(products)  
-    console.log("product stored in state",products )
-  }, [])
-  
   return (
     <>
     <HeadC title={"Shop"} description={"All Products"}/>
     <PageInfo Info={"all products"}/>
-    <SingleProduct products={Products}/>
+    <SingleProduct products={products}/>
     </>
   )
 }

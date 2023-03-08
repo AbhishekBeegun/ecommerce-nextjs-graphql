@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit"
 
 const compareSlice = createSlice({
-    name : 'compare',
+    name : 'Compare',
     initialState: [],
     reducers : {
         addToCompare: (state, action) => {

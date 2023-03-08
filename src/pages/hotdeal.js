@@ -1,5 +1,4 @@
 import React from 'react'
-import { useState } from "react";
 import { gql } from "@apollo/client";
 import { getApolloClient } from "@/lib/apollo-client";
 import SingleProduct from "@/components/ProductLayout/SingleProduct";
@@ -8,15 +7,11 @@ import HeadC from "@/components/BasicLayout/Head";
 
 
 const hotdeal = ({products}) => {
-
-  const [Products, setProducts] = useState([])
-
-
   return (
     <>
     <HeadC title={"Hot Deals"} description={"Product on Promo"} />
       <PageInfo Info={"hot deals"} />
-      <SingleProduct products={Products}/>
+      <SingleProduct products={products}/>
     </>
   )
 }
