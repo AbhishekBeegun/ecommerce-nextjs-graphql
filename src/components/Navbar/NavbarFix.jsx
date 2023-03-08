@@ -14,7 +14,7 @@ const NavbarFix = () => {
     <Link href="/brands">
         Brands
     </Link>
-    <Link href="/compare">
+    <Link href="/comparepage">
       Compare
     </Link>
    </nav>
