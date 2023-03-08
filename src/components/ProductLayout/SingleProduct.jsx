@@ -1,10 +1,8 @@
 import React from 'react'
 import { Spinner } from "flowbite-react";
-import { useState } from "react";
 import Link from "next/link";
 import CimFinance from "../Calculation/CimFinance";
 import SaveSale from "../Calculation/SaveSale";
-import {IoMdGitCompare} from "react-icons/io"
 import CompareBtn from "../Compare/CompareBtn";
 // import AddtoCartBtn from "../Cart/AddtoCartBtn";
 
@@ -79,7 +77,7 @@ const SingleProduct = ({products}) => {
 
 
 
-                <div>
+                <>
                 {product.onsale ?
                  <div className="absolute top-5 right-0">
                   <SaveSale regularPrice={product.price} salePrice={product.sale}/>
@@ -88,7 +86,7 @@ const SingleProduct = ({products}) => {
 
 
              
-                </div> 
+                </> 
 
 
 

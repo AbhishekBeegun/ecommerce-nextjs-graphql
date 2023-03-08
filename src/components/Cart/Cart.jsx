@@ -1,6 +1,8 @@
-import { Button } from "flowbite-react"
 import React from 'react'
+import { Button } from "flowbite-react"
+import Link from "next/link"
 import { useState } from "react"
+import {AiOutlineClose} from "react-icons/ai"
 import {MdOutlineShoppingCart} from "react-icons/md"
 import { useSelector } from "react-redux"
 import CartItem from "./CartItem"
@@ -36,22 +38,37 @@ const Cart = () => {
       <MdOutlineShoppingCart size={22}/>
      </button>
      </>
- : <Button onClick={() => handleCart()}>X</Button>}
+ : <Button onClick={() => handleCart()}><AiOutlineClose/></Button>}
   
 
-     <div className={`-top-1 z-50 right-0 flex flex-col rounded-b-lg border-b border-black bg-secondary fixed bg-secondary w-full h-[70vh] py-5
+     <div className={`-top-1 z-50 right-0 flex flex-col rounded-b-lg border-b border bg-secondary fixed w-full h-[75vh] py-5
        ${CartOpen ? '-translate-y':'-translate-y-full'}
        ease-in-out duration-300
        }`}>
     <div>
 
 
-      <button onClick={() => handleCart()}>X</button>
+      <button className="text-primary p-1 border shadow rounded-lg" 
+      onClick={() => handleCart()}><AiOutlineClose size={20}/>
+      </button>
       {cart.length === 0 ? (
-        <h1>Your Cart is Empty!</h1>
+        <div className="flex flex-col gap-5 justify-center items-center">
+          <p className="text-primary">Your Cart is Empty!</p>
+          <Link href="/brands">
+          <p typeof="button" onClick={() => handleCart()} className="bg-primary text-secondary uppercase px-2 py-1 rounded-lg">Find a product</p>          
+         </Link>
+        </div>
       ) : (
         <>
-        <h2 className="text-lg font-semibold">Total: Rs {getTotalPrice()}</h2>
+        <div className="flex flex-col justify-center items-center gap-2 py-2">
+        <h2 className="text-sm font-semibold">TOTAL : Rs {getTotalPrice()}</h2>
+        <Link href="/404">
+        <button onClick={() => handleCart()} 
+        className="px-2 py-1 bg-primary text-secondary rounded-lg"
+        >Proceed to checkout
+        </button>
+        </Link>
+        </div>
         <div className="flex flex-col items-center lg:justify-center lg:flex-row lg:flex-wrap gap-2 max-h-[55vh] overflow-scroll">
 
           {cart.map((item) => (

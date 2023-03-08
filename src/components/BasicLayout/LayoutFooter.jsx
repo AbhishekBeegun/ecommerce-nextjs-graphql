@@ -7,7 +7,7 @@ const LayoutFooter = () => {
     <Footer bgDark={true}>
   <div className="w-full border-t">
     <div className="grid w-full grid-cols-2 gap-8 py-8 px-6 md:grid-cols-4">
-      <div>
+      <>
         <Footer.Title title="Company" />
         <Footer.LinkGroup col={true}>
           <Footer.Link href="#">
@@ -23,8 +23,8 @@ const LayoutFooter = () => {
             Blog
           </Footer.Link>
         </Footer.LinkGroup>
-      </div>
-      <div>
+      </>
+      <>
         <Footer.Title title="help center" />
         <Footer.LinkGroup col={true}>
           <Footer.Link href="#">
@@ -40,8 +40,8 @@ const LayoutFooter = () => {
             Contact Us
           </Footer.Link>
         </Footer.LinkGroup>
-      </div>
-      <div>
+      </>
+      <>
         <Footer.Title title="legal" />
         <Footer.LinkGroup col={true}>
           <Footer.Link href="#">
@@ -54,8 +54,8 @@ const LayoutFooter = () => {
             Terms & Conditions
           </Footer.Link>
         </Footer.LinkGroup>
-      </div>
-      <div>
+      </>
+      <>
         <Footer.Title title="available" />
         <Footer.LinkGroup col={true}>
           <Footer.Link href="#">
@@ -71,7 +71,7 @@ const LayoutFooter = () => {
             MacOS
           </Footer.Link>
         </Footer.LinkGroup>
-      </div>
+      </>
     </div>
     <div className="w-full bg-primary py-6 px-4 sm:flex sm:items-center sm:justify-between">
       <Footer.Copyright

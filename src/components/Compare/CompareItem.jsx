@@ -13,7 +13,7 @@ const CompareItem = ({item}) => {
 
 
   return (
-    <div>
+    <>
       <Toaster/>
       <div key={item.slug} className="w-[250px] border gap-5 rounded-lg px-2 flex flex-col py-2">
       <div className="flex flex-col items-center gap-5">
@@ -34,7 +34,7 @@ const CompareItem = ({item}) => {
       </div>
 
  
-    </div>
+    </>
   )
 }
 

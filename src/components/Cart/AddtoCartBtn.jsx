@@ -13,14 +13,14 @@ const AddtoCartBtn = ({product}) => {
   }
 
   return (
-    <div>
+    <>
       <Toaster/>
     <button 
      onClick={() => {dispatch(addToCart(product)) ; click()}}
      className="border bg-primary text-secondary rounded-lg w-28 h-10 text-xs font-semibold">
      ADD TO CART
      </button>
-    </div>
+    </>
   )
 }
 

@@ -1,9 +1,11 @@
 import React from 'react'
 import Link from "next/link"
+import HeadC from "@/components/BasicLayout/Head"
 
 const brands = () => {
   return (
     <div className="flex flex-wrap gap-5 justify-center py-4">
+        <HeadC title={"Shop By Brands"} description={"Brands"}/>
         <Link href={`/categories/${"samsung"}`}>
             <img src="https://media.graphassets.com/output=format:jpg/resize=height:800,fit:max/EnwweEybQSlr8sC2UOmp"
             className="brandimg"

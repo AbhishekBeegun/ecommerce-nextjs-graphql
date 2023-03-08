@@ -1,12 +1,26 @@
 import React from 'react'
 import { Accordion } from "flowbite-react"
+import HeadC from "@/components/BasicLayout/Head"
 
 const Issues = () => {
   return (
     <>
+    <HeadC title={"Issues"} description={"Problems"}/>
         <h1 className="text-2xl uppercase text-primary ">issues to fix / features to setup</h1>
     
         <Accordion collapseAll={true}>
+
+        <Accordion.Panel>
+    <Accordion.Title>
+       Local Storage
+    </Accordion.Title>
+    <Accordion.Content>
+      <p className="mb-2 text-gray-500 dark:text-gray-400">
+      Not set up 
+      </p>   
+    </Accordion.Content>
+  </Accordion.Panel>
+
   <Accordion.Panel>
     <Accordion.Title>
     User Auth
@@ -144,6 +158,7 @@ const Issues = () => {
     </Accordion.Content>
   </Accordion.Panel>
 
+ 
 
 
        </Accordion> 

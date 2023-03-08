@@ -5,6 +5,7 @@ import { gql } from "@apollo/client";
 import { getApolloClient } from "@/lib/apollo-client";
 import SingleProduct from "@/components/ProductLayout/SingleProduct";
 import PageInfo from "@/components/BasicLayout/PageInfo";
+import HeadC from "@/components/BasicLayout/Head";
 
 
 const hotdeal = ({products}) => {
@@ -18,10 +19,11 @@ const hotdeal = ({products}) => {
 
 
   return (
-    <div>
+    <>
+    <HeadC title={"Hot Deals"} description={"Product on Promo"} />
       <PageInfo Info={"hot deals"} />
       <SingleProduct products={Products}/>
-    </div>
+    </>
   )
 }
 

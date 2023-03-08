@@ -10,6 +10,7 @@ import { useState } from "react";
 import AddtoCartBtn from "@/components/Cart/AddtoCartBtn";
 import PageInfo from "@/components/BasicLayout/PageInfo";
 import { toast } from "react-hot-toast";
+import HeadC from "@/components/BasicLayout/Head";
 // export const CartContext = createContext();
 
 export default function Products({ products }) {
@@ -51,19 +52,21 @@ const handlewish =() =>{
 
   return (
     <>
+    
       <main>    
         {products.map(product => 
         <div key={product.slug} className="flex flex-col lg:flex-row justify-center lg:gap-10">
         {/* image */}
+        <HeadC title={product.title} description={product.content.html}/>
         <div className="flex items-center justify-center">
         <img className="h-[30vh] w-fit border" src={product.image[0].url} alt="ProductImage" />
         </div>
 
         {/* description */}
-        <div>
+        <>
          <PageInfo Info={"description"}/>
          <h3 dangerouslySetInnerHTML={{__html: product.content.html}} className="text-base text-primary font-semibold text-center py-4" />            
-        </div>        
+        </>        
     
 
          {/* fixed bottom  */}

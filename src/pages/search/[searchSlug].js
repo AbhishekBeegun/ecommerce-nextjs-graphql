@@ -6,9 +6,10 @@ import SingleProduct from "@/components/ProductLayout/SingleProduct";
 
 const search = ({products}) => {
     return (
-      <div>
+      <>
+      <HeadC title={"Search Page"} description={"Result for search query"}/>
         <SingleProduct products={products}/>  
-      </div>
+      </>
     )
   }
   

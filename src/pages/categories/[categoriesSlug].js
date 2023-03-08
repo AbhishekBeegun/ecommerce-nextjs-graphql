@@ -2,13 +2,15 @@ import React from 'react'
 import { gql } from "@apollo/client";
 import { getApolloClient } from "@/lib/apollo-client";
 import SingleProduct from "@/components/ProductLayout/SingleProduct";
+import HeadC from "@/components/BasicLayout/Head";
 
 
 const search = ({products}) => {
     return (
-      <div>
+      <>
+      <HeadC title={"Categorie"} description={"Categorie selected"}/>
         <SingleProduct products={products}/>  
-      </div>
+      </>
     )
   }
   
