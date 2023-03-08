@@ -4,6 +4,7 @@ import Link from "next/link";
 import CimFinance from "../Calculation/CimFinance";
 import SaveSale from "../Calculation/SaveSale";
 import CompareBtn from "../Compare/CompareBtn";
+import Image from "next/image";
 // import AddtoCartBtn from "../Cart/AddtoCartBtn";
 
 

@@ -2,13 +2,10 @@
 const nextConfig = {
   reactStrictMode: false,
   images: {
-    formats: ['image/avif', 'image/webp'],
     remotePatterns: [
       {
-        protocol: 'http',
-        hostname: 'localhost',
-        port: '',
-        pathname: '/**',
+        protocol: 'https',
+        hostname: 'media.graphassets.com',
       },
     ],
   },

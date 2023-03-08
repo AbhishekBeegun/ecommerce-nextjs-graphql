@@ -11,6 +11,7 @@ import AddtoCartBtn from "@/components/Cart/AddtoCartBtn";
 import PageInfo from "@/components/BasicLayout/PageInfo";
 import { toast } from "react-hot-toast";
 import HeadC from "@/components/BasicLayout/Head";
+import Image from "next/image";
 // export const CartContext = createContext();
 
 export default function Products({ products }) {
@@ -59,7 +60,7 @@ const handlewish =() =>{
         {/* image */}
         <HeadC title={product.title} description={product.content.html}/>
         <div className="flex items-center justify-center">
-        <img className="h-[30vh] w-fit border" src={product.image[0].url} alt="ProductImage" />
+        <img className="h-[30vh] border" src={product.image[0].url} alt="ProductImage" />
         </div>
 
         {/* description */}

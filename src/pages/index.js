@@ -24,7 +24,7 @@ export default function Home({MainPageproducts}) {
 
   useEffect(() => {
     setMainPageProduct(MainPageproducts)
-  },[])
+  },[MainPageProduct])
 
   //allow to get n number in an aary pu latest products asuuming query in Decendin g order
   const latest = MainPageProduct.slice(0,4);

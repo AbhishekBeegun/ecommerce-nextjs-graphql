@@ -1,4 +1,5 @@
 import HeadC from "@/components/BasicLayout/Head"
+import Image from "next/image"
 import React from 'react'
 
 const Error404 = () => {

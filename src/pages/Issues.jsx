@@ -6,7 +6,7 @@ const Issues = () => {
   return (
     <>
     <HeadC title={"Issues"} description={"Problems"}/>
-        <h1 className="text-2xl uppercase text-primary ">issues to fix / features to setup</h1>
+        <h1 className="text-2xl uppercase text-primary">issues to fix / features to setup</h1>
     
         <Accordion collapseAll={true}>
 
@@ -120,19 +120,8 @@ const Issues = () => {
     </Accordion.Title>
     <Accordion.Content>
       <p className="mb-2 text-gray-500 dark:text-gray-400">
-    "@apollo/client": "^3.7.9",
-    "@reduxjs/toolkit": "^1.9.3",
-    "eslint": "8.35.0",
-    "eslint-config-next": "13.2.3",
-    "flowbite-react": "^0.3.8",
-    "graphql": "^16.6.0",
-    "next": "13.2.3",
-    "next-auth": "^4.20.1",
-    "react-hot-toast": "^2.4.0",
-    "react-icons": "^4.7.1",
-    "react-redux": "^8.0.5"
-
-      </p>   
+ See in Package.json
+       </p>   
     </Accordion.Content>
   </Accordion.Panel>
 
