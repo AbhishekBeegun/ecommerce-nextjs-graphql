@@ -1,16 +1,22 @@
 import React from 'react'
 import CompareItem from "@/components/Compare/CompareItem";
 import Link from "next/link";
-import { useSelector } from "react-redux"
+import { useSelector } from "react-redux";
 import PageInfo from "@/components/BasicLayout/PageInfo";
 import HeadC from "@/components/BasicLayout/Head";
 
 const comparepage = () => {
-    const compare = useSelector ((state) => state.compare);
+
+
+    const compare = useSelector(state => state.compare);
+
+
   return (
     <div className="py-2">
       <HeadC title={"Compare"} description={"Compare Products"}/>
       <PageInfo Info={"Compare"} />    
+
+
         {compare.length === 0 ? (
         <div className="w-full flex flex-col justify-center gap-2 items-center">
          <p className="text-primary">No product to compare ! </p>
