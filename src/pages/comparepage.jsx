@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import PageInfo from "@/components/BasicLayout/PageInfo";
 import HeadC from "@/components/BasicLayout/Head";
 
-const comparepage = () => {
+const Comparepage = () => {
 
 
     const compare = useSelector(state => state.compare);
@@ -39,4 +39,4 @@ const comparepage = () => {
   )
 }
 
-export default comparepage
+export default Comparepage
