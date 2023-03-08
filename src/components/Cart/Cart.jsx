@@ -73,7 +73,7 @@ const Cart = () => {
 
           {cart.map((item) => (
             
-           <CartItem item={item}/>
+           <CartItem key={item} item={item}/>
           ))}
         </div>
 

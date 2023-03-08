@@ -1,6 +1,5 @@
 import React from 'react'
 import { useState } from "react";
-import { useEffect } from "react";
 import { gql } from "@apollo/client";
 import { getApolloClient } from "@/lib/apollo-client";
 import SingleProduct from "@/components/ProductLayout/SingleProduct";
@@ -11,11 +10,6 @@ import HeadC from "@/components/BasicLayout/Head";
 const hotdeal = ({products}) => {
 
   const [Products, setProducts] = useState([])
-
-  useEffect(() => {
-    setProducts(products)  
-    console.log("product stored in state",products )
-  }, [])
 
 
   return (
