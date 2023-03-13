@@ -52,10 +52,11 @@ const MainNavbar = () => {
 
    {/* UserAuth not setup I dont know to do that need to learn */}
    {/* <User/> */}
-
+   <button title="Issues">
    <Link href="/Issues">
    <GoAlert size={20} className="text-primary"/>
    </Link>
+   </button>
    <Cart/>    
    <Navbar.Toggle />
   </div>

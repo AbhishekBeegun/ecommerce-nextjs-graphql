@@ -47,7 +47,7 @@ export default function Products({ products }) {
 
 const handlewish =() =>{ 
   setAddtowishlist(!Addtowishlist)
-  toast.error("Wishlist not impremented")
+  toast.error("Wishlist not Set-up")
 }
 
 
@@ -64,15 +64,15 @@ const handlewish =() =>{
         </div>
 
         {/* description */}
-        <>
+        <div className="flex flex-col lg:w-1/2">
          <PageInfo Info={"description"}/>
          <h3 dangerouslySetInnerHTML={{__html: product.content.html}} className="text-base text-primary font-semibold text-center py-4" />            
-        </>        
+        </div>        
     
 
          {/* fixed bottom  */}
 
-        <div className={`fixed z-10 bottom-0 left-0 w-full h-[50vh] border-t border-gray-400 rounded-t-2xl bg-secondary flex flex-col justify-evenly
+        <div className={`fixed z-10 bottom-0 left-0 lg:left-1/4  w-full h-[50vh] lg:w-[50vw] md:w-[100vw] border-t lg:border border-gray-400 rounded-t-2xl bg-secondary flex flex-col justify-evenly
            ${Isopen ? 'translate-y-0':'translate-y-[40vh]'} ease-in-out duration-300`}>
            {/* scroll to hide  */}
           <div className="flex justify-center">

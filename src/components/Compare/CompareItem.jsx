@@ -3,7 +3,6 @@ import { useDispatch } from "react-redux"
 import { removeFromCompare } from "../../../redux/compare.slice";
 import { FiTrash } from "react-icons/fi";
 import { toast, Toaster } from "react-hot-toast";
-import Image from "next/image";
 const CompareItem = ({item}) => {
 
   const dispatch = useDispatch();

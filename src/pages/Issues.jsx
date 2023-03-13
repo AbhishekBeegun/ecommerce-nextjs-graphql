@@ -10,6 +10,18 @@ const Issues = () => {
     
         <Accordion collapseAll={true}>
 
+
+
+        <Accordion.Panel>
+    <Accordion.Title>
+       Not optimised for pc
+    </Accordion.Title>
+    <Accordion.Content>
+      <p className="mb-2 text-gray-500 dark:text-gray-400">
+      Mostly for mobile
+      </p>   
+    </Accordion.Content>
+  </Accordion.Panel>
         <Accordion.Panel>
     <Accordion.Title>
        Local Storage

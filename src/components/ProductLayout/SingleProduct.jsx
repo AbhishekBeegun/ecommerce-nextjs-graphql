@@ -4,7 +4,7 @@ import Link from "next/link";
 import CimFinance from "../Calculation/CimFinance";
 import SaveSale from "../Calculation/SaveSale";
 import CompareBtn from "../Compare/CompareBtn";
-import Image from "next/image";
+import SmallAddtoCartBtn from "../Cart/SmallAddtoCartBtn";
 // import AddtoCartBtn from "../Cart/AddtoCartBtn";
 
 
@@ -71,9 +71,10 @@ const SingleProduct = ({products}) => {
                   {/* <AddtoCartBtn product={product}/> bttn not activate */}
                 </>
 
-                <div title="Compare" 
-                className="absolute top-5 left-2">
+                <div 
+                className="absolute top-5 left-2 flex flex-col gap-2">
                   <CompareBtn product={product}/>
+                  <SmallAddtoCartBtn product={product}/>
                 </div>
 
 

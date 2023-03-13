@@ -32,7 +32,8 @@ const Cart = () => {
      <>
      {!CartOpen ?
      <>  
-      <button className="relative" 
+      <button title="Cart" 
+      className="relative" 
       onClick={() => handleCart()}>
       {cart.length === 0 ? <></>:<p className="absolute -top-3 -right-4 text-xs font-semibold bg-primary px-2 py-1 rounded-full text-secondary">{cart.length}</p>}
       <MdOutlineShoppingCart size={22}/>
@@ -41,14 +42,12 @@ const Cart = () => {
  : <Button onClick={() => handleCart()}><AiOutlineClose/></Button>}
   
 
-     <div className={`-top-1 z-50 right-0 flex flex-col rounded-b-lg border-b border bg-secondary fixed w-full h-[75vh] py-5
+     <div className={`-top-1 z-50 right-0 flex flex-col rounded-b-lg border-b border bg-secondary fixed w-full h-[75vh] py-5 
        ${CartOpen ? '-translate-y':'-translate-y-full'}
        ease-in-out duration-300
        }`}>
-    <div>
-
-
-      <button className="text-primary p-1 border shadow rounded-lg" 
+      <div>
+      <button className="text-primary p-1 border shadow rounded-lg ml-5 lg:ml-10" 
       onClick={() => handleCart()}><AiOutlineClose size={20}/>
       </button>
       {cart.length === 0 ? (

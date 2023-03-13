@@ -11,18 +11,18 @@ const CompareBtn = ({product}) => {
   }
   
   return (
-    <>
+    <div title="Add to Compare">
    
     <Toaster/>
 
     <div className="bg-secondary p-1 rounded-lg flex items-center justify-center">
       <button onClick={() => {dispatch(addToCompare(product)) ; click()}}
-        className="text-primary">
+        className="text-primary hover:scale-110">
        <IoMdGitCompare size={25}/>
       </button>
     </div>
 
-    </>
+    </div>
   )
 }
 

@@ -1,4 +1,3 @@
-import Image from "next/image"
 import React from 'react'
 import { FiMinus, FiPlus, FiTrash } from "react-icons/fi"
 import { useDispatch } from "react-redux"

@@ -7,7 +7,10 @@ const compareSlice = createSlice({
         addToCompare: (state, action) => {
             const itemExists = state.find((item) => item.slug === action.payload.slug);
             if (itemExists) {
-              itemExists.quantity++;
+              return(
+              alert("Product Already in Compare")
+              )
+
             } else {
               state.push({ ...action.payload, quantity: 1 });
             }

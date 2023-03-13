@@ -27,7 +27,7 @@ export default function Home({MainPageproducts}) {
   },[MainPageProduct])
 
   //allow to get n number in an aary pu latest products asuuming query in Decendin g order
-  const latest = MainPageProduct.slice(0,4);
+  const latest = MainPageProduct.slice(0,5);
 
 
   //deals of the week check if Onsale = true display 1st 5 of the
@@ -37,7 +37,7 @@ export default function Home({MainPageproducts}) {
   }
   const deals = MainPageProduct.filter(onSale);
 
-  const DOTW = deals.slice(0,4);
+  const DOTW = deals.slice(0,5);
 
  
   return (
@@ -58,15 +58,7 @@ export default function Home({MainPageproducts}) {
           <PageInfo Info={"Newly added"}/>
           <SingleProduct products={latest} />
         </div>
-        <div>      
-
-        </div> 
-
-
-
-        {/* <div>
-           <SingleProduct products={MainPageproducts}/>
-        </div> */}
+        
       </main>
     </>
   )

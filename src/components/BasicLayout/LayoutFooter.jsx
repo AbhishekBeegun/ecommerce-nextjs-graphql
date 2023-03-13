@@ -73,8 +73,9 @@ const LayoutFooter = () => {
         </Footer.LinkGroup>
       </>
     </div>
-    <div className="w-full bg-primary py-6 px-4 sm:flex sm:items-center sm:justify-between">
+    <div className="w-full text-secondary bg-primary py-6 px-4 sm:flex sm:items-center sm:justify-between">
       <Footer.Copyright
+     
         href="#"
         by="Abhishek Beegun™"
         year={new Date().getFullYear()}
