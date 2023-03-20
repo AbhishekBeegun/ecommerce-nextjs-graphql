@@ -27,3 +27,9 @@
 .brandimg {
     @apply border rounded-lg hover:scale-110 transition-all ease-in-out w-[150px] h-[150px]
 }
+.navfix-items {
+  border-color: var(--color-primary);
+}
+.navfix-items{
+@apply bg-secondary hover:bg-primary text-primary font-semibold hover:text-secondary py-1 px-3 border rounded-full
+}

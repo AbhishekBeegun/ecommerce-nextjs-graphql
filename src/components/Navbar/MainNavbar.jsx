@@ -39,13 +39,15 @@ const MainNavbar = () => {
       <img
     // galaxy
       src="https://media.graphassets.com/output=format:jpg/resize=height:800,fit:max/rtfRp7DLSyya3k8rBmQA"
-      className="h-6 sm:h-6"
+      width="100px"
+      height="20px"
       alt="Store Logo"/>:
       <img
       // 361
         src="https://media.graphassets.com/output=format:jpg/resize=height:800,fit:max/zLpa3k3UQCiDZv4DBNpn"
-        className="h-12 sm:h-12"
-        alt="Store Logo"/>}
+        width="50px"
+        height="20px"
+       alt="Store Logo"/>}
     </Link>
   
   <div className="flex items-center gap-2 md:order-3">

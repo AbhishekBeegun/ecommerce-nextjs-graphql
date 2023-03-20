@@ -56,7 +56,7 @@ const handlewish =() =>{
     
       <main>    
         {products.map(product => 
-        <div key={product.slug} className="flex flex-col lg:flex-row justify-center lg:gap-10">
+        <div key={product.slug} className="flex flex-col lg:flex-row lg:py-16 justify-center lg:gap-10">
         {/* image */}
         <HeadC title={product.title} description={product.content.html}/>
         <div className="flex items-center justify-center">
@@ -72,7 +72,7 @@ const handlewish =() =>{
 
          {/* fixed bottom  */}
 
-        <div className={`fixed z-10 bottom-0 left-0 lg:left-1/4  w-full h-[50vh] lg:w-[50vw] md:w-[100vw] border-t lg:border border-gray-400 rounded-t-2xl bg-secondary flex flex-col justify-evenly
+        <div className={`fixed z-10 bottom-0 left-0 lg:left-1/4 w-full h-[50vh] lg:w-[45vw] lg:m-auto md:w-[100vw] border-t lg:border border-gray-400 rounded-t-2xl bg-secondary flex flex-col justify-evenly
            ${Isopen ? 'translate-y-0':'translate-y-[40vh]'} ease-in-out duration-300`}>
            {/* scroll to hide  */}
           <div className="flex justify-center">

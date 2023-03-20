@@ -4,12 +4,12 @@ import { Carousel } from "flowbite-react"
 const HomeBanner = () => {
   return (
     <>
-      <div className="h-[150px] sm:h-64 xl:h-80 2xl:h-96">
+      <div className="h-[200px] m-auto w-[95vw] xl:h-80 2xl:h-96 lg:w-[70vw]">
   <Carousel indicators={false}>
-    <img
+    {/* <img
       src="https://media.graphassets.com/output=format:jpg/resize=height:800,fit:max/rXB6lmnLTXyPUHwkyUV9"
       alt="banner-one"
-    />
+    /> */}
     <img
       src="https://media.graphassets.com/output=format:jpg/resize=height:800,fit:max/lflQuitSySQZTapiUEUu"
       alt="banner-two"
