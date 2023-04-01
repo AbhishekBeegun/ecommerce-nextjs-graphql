@@ -7,7 +7,7 @@ const Searchbar = () => {
   const [Input, setInput] = useState("");
 
   return (
-    <div className="py-1 px-4">
+    <div className="py-2 px-4 lg:px-48">
     <form>   
     <label className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-secondary">Search</label>
     <div className="relative">

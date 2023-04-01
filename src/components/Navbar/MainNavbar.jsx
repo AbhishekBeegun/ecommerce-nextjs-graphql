@@ -24,7 +24,7 @@ const MainNavbar = () => {
   }
 
   return (
-    <div className="pb-2">
+    <div className="pb-2 lg:px-48">
       <Toaster/>
 
       {/* //categories and other */}
