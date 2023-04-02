@@ -40,13 +40,13 @@ const SingleProduct = ({products}) => {
         <ul className="flex flex-wrap justify-center items-center gap-5">
           {products && products.length > 0 && products.map(product => {
             return (
-              <div key={product.slug} className="relative w-[250px]" >
+              <div key={product.slug} className="relative w-[290px]" >
                 <Link href={product.path}>
                   <div className="flex flex-col">
-                  <img src={product.image[0].url} alt="Productimg" width="250" height="250" className="border hover:scale-110 transition-all ease-in-out rounded-lg"/>
+                  <img src={product.image[0].url} alt="Productimg" width="290" height="290" className="border hover:scale-110 transition-all ease-in-out rounded-lg"/>
                     <h3 dangerouslySetInnerHTML={{
                       __html: product.title
-                    }} className="text-base font-semibold py-4 shrink" />
+                    }} className="text-base font-semibold py-2 shrink" />
                   </div>
                 </Link>
                 

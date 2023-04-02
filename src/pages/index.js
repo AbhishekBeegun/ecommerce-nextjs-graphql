@@ -27,7 +27,7 @@ export default function Home({MainPageproducts}) {
   },[MainPageProduct])
 
   //allow to get n number in an aary pu latest products asuuming query in Decendin g order
-  const latest = MainPageProduct.slice(0,5);
+  const latest = MainPageProduct.slice(10,15);
 
 
   //deals of the week check if Onsale = true display 1st 5 of the
@@ -72,7 +72,7 @@ export async function getStaticProps() {
   const data = await apolloClient.query({
     query: gql`
       {  
-          products(first:20) {
+          products(first: 20, orderBy: createdAt_DESC) {
               slug
               title
               onsale
